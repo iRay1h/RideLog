@@ -1,0 +1,53 @@
+-- CREATE DATABASE ridelog_db;
+
+-- USE ridelog_db;
+
+-- -- =========================================
+-- -- TABLA USERS
+-- -- =========================================
+
+-- CREATE TABLE users (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+--     full_name VARCHAR(100) NOT NULL,
+
+--     username VARCHAR(50) NOT NULL UNIQUE,
+
+--     email VARCHAR(100) NOT NULL UNIQUE,
+
+--     password VARCHAR(255) NOT NULL,
+
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+
+-- -- =========================================
+-- -- TABLA MOTORCYCLES
+-- -- =========================================
+
+-- CREATE TABLE motorcycles (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+--     brand VARCHAR(50) NOT NULL,
+
+--     model VARCHAR(50) NOT NULL,
+
+--     year INT NOT NULL,
+
+--     engine_cc INT NOT NULL,
+
+--     current_km INT DEFAULT 0,
+
+--     image_url VARCHAR(500),
+
+--     custom_name VARCHAR(100),
+
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+--     owner_id BIGINT NOT NULL,
+
+--     CONSTRAINT fk_motorcycle_owner
+--         FOREIGN KEY (owner_id)
+--         REFERENCES users(id)
+--         ON DELETE CASCADE
+-- );
+
